@@ -1,0 +1,6 @@
+body {font-family: Arial; margin:0;}
+header {padding:15px; background:#eee;}
+.hero {text-align:center; padding:40px;}
+.profile-pic {width:140px; border-radius:50%;}
+.cards {display:grid; gap:10px;}
+.dark {background:#0f172a; color:white;}
