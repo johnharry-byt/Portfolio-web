@@ -1,6 +1,93 @@
-body {font-family: Arial; margin:0;}
-header {padding:15px; background:#eee;}
-.hero {text-align:center; padding:40px;}
-.profile-pic {width:140px; border-radius:50%;}
-.cards {display:grid; gap:10px;}
-.dark {background:#0f172a; color:white;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    transition: 0.3s;
+}
+
+/* HEADER */
+.glass {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.8);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: #0f172a;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #0f172a;
+    transition: 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+/* ANIMATION */
+.fade-in {
+    opacity: 0;
+    animation: fadeUp 1s forwards;
+}
+
+.delay { animation-delay: 0.5s; }
+.delay2 { animation-delay: 1s; }
+
+@keyframes fadeUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.cards p {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.cards p:hover {
+    transform: translateY(-5px);
+}
+
+/* DARK MODE */
+.dark {
+    background: #0f172a;
+    color: white;
+}
+
+.dark .cards p {
+    background: #1e293b;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+}
